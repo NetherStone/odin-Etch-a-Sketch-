@@ -9,11 +9,11 @@ body {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    width: 352px;
+    width: 500px;
+    height: 500px;
 }
 
 .gridDiv {
-    border: 1px solid black;
-    width: 20px;
-    height: 20px;
+    width: 31.25px;
+    height: 31.25px;
 }
