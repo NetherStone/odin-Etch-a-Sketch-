@@ -1,0 +1,9 @@
+#gridContainer {
+    border: 1px solid black;
+}
+
+.gridDiv {
+    border: 1px solid black;
+    min-height: 5px;
+    min-width: 5px;
+}
