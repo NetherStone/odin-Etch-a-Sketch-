@@ -17,3 +17,7 @@ body {
     width: 31.25px;
     height: 31.25px;
 }
+
+.gridDiv:hover {
+    background-color: aqua;
+}
