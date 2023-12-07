@@ -5,18 +5,19 @@ for (let i = 0; i < 16; i++){ //16x16 grid in js
         let gridDiv = document.createElement("div");
         gridDiv.className = "gridDiv";
 
-        gridDiv.addEventListener("mousedown", () => {
+        gridDiv.addEventListener("mousedown", function(MouseEvent) {
             isMouseDown = true;
+            MouseEvent.preventDefault();
         });
-
+        
         gridDiv.addEventListener("mouseup", () => {
             isMouseDown = false;
         });
 
         gridDiv.addEventListener("mouseenter", () => {
             if (isMouseDown) {
-                gridDiv.classList.add("hovered")
-            }
+                gridDiv.classList.add("hovered");
+            };
         });
        /*gridDiv.addEventListener("mouseover", () => {
             gridDiv.classList.add("hovered");
