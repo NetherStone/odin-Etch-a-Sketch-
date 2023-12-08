@@ -8,6 +8,13 @@ body {
 
 #mainItems {
     display: flex;
+    width: 80%;
+}
+
+#buttonsDiv {
+    display: flex;
+    margin-right: 19%;
+    margin-left: 8.9%;
 }
 
 #squaresButton {
