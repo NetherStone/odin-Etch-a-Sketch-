@@ -6,6 +6,15 @@ body {
     flex-direction: column;
 }
 
+#mainItems {
+    display: flex;
+}
+
+#squaresButton {
+    height: 50px;
+    width: 70px;
+}
+
 #gridContainer {
     border: 1px solid black;
     display: flex;
