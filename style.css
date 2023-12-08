@@ -1,8 +1,9 @@
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     min-height: 700px;
+    flex-direction: column;
 }
 
 #gridContainer {
