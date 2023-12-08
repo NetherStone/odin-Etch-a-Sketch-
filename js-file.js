@@ -1,5 +1,11 @@
 const gridContainer = document.getElementById("gridContainer");
 
+const squaresButton = document.getElementById("squaresButton");
+
+squaresButton.addEventListener("click", () =>{
+    console.log('Hello world!')
+});
+
 let isMouseDown = false;
 
 for (let i = 0; i < 16; i++){ //16x16 grid in js
