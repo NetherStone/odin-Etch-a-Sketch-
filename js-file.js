@@ -9,7 +9,12 @@ squaresButton.addEventListener("click", () =>{ //Ask user for number of squares 
      userNumber = Math.floor(userNumber);
      if (isNaN(userNumber)){
         userNumber = 64;
-     };
+     }
+     if (userNumber < 1){
+        userNumber = 64;
+     } else if (userNumber > 100){
+        userNumber = 64;
+     }
      console.log(userNumber);
 });
 
