@@ -2,8 +2,11 @@ const gridContainer = document.getElementById("gridContainer");
 
 const squaresButton = document.getElementById("squaresButton");
 
+let userNumber = 64
+
 squaresButton.addEventListener("click", () =>{
-    console.log('Hello world!')
+     userNumber = prompt("Please enter the number of squares you want in the grid.");
+     userNumber = Math.floor(userNumber);
 });
 
 let isMouseDown = false;
