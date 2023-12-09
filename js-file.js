@@ -4,9 +4,13 @@ const squaresButton = document.getElementById("squaresButton");
 
 let userNumber = 64
 
-squaresButton.addEventListener("click", () =>{
+squaresButton.addEventListener("click", () =>{ //Ask user for number of squares in grid, number should range from 1 to 100.
      userNumber = prompt("Please enter the number of squares you want in the grid.");
      userNumber = Math.floor(userNumber);
+     if (isNaN(userNumber)){
+        userNumber = 64;
+     };
+     console.log(userNumber);
 });
 
 let isMouseDown = false;
