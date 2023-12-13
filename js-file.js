@@ -9,7 +9,7 @@ let isMouseDown = false;
 function divCreator(userNumber) {
     let divSize = 500 / userNumber;
     divSize = divSize.toString();
-    divSize = divSize + 'px';
+    divSize += 'px';
     for (let i = 0; i < userNumber; i++){ //16x16 grid in js
         for (let x = 0; x < userNumber; x++){
             let gridDiv = document.createElement("div");
@@ -40,7 +40,7 @@ function divCreator(userNumber) {
 divCreator(userNumber); //Base box for user to work with
 
 squaresButton.addEventListener("click", () =>{ //Ask user for number of squares in grid, number should range from 1 to 100.
-     userNumber = prompt("Please enter the number of squares you want in the grid.");
+     userNumber = prompt("Please enter the number of squares (square x square) you want in the grid.");
      userNumber = Math.floor(userNumber);
      if (isNaN(userNumber)){
         userNumber = 16;
