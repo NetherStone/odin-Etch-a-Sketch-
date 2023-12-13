@@ -2,7 +2,7 @@ const gridContainer = document.getElementById("gridContainer");
 
 const squaresButton = document.getElementById("squaresButton");
 
-let userNumber = 16
+let userNumber = 16;
 
 let isMouseDown = false;
 
@@ -17,7 +17,7 @@ function divCreator(userNumber) {
             gridDiv.style.width = divSize;
             gridDiv.style.height = divSize;
     
-             gridDiv.addEventListener("mousedown", (event) => {
+             gridDiv.addEventListener("mousedown", (event) => { //checks if mouse is inside the box
                 isMouseDown = true;
                 event.preventDefault(); 
             });
@@ -37,7 +37,7 @@ function divCreator(userNumber) {
     }
 }
 
-divCreator(userNumber);
+divCreator(userNumber); //Base box for user to work with
 
 squaresButton.addEventListener("click", () =>{ //Ask user for number of squares in grid, number should range from 1 to 100.
      userNumber = prompt("Please enter the number of squares you want in the grid.");
@@ -52,5 +52,7 @@ squaresButton.addEventListener("click", () =>{ //Ask user for number of squares 
         userNumber = 16;
      }
 
-     console.log(userNumber);
+     gridContainer.innerHTML = '';
+
+     divCreator(userNumber);
 });
