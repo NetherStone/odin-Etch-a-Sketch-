@@ -6,29 +6,33 @@ let userNumber = 16
 
 let isMouseDown = false;
 
-for (let i = 0; i < 16; i++){ //16x16 grid in js
-    for (let x = 0; x < 16; x++){
-        let gridDiv = document.createElement("div");
-        gridDiv.className = "gridDiv";
-
-         gridDiv.addEventListener("mousedown", (event) => {
-            isMouseDown = true;
-            event.preventDefault(); 
-        });
-
-        gridDiv.addEventListener("mouseup", () => {
-            isMouseDown = false;
-        });
-
-        gridDiv.addEventListener("mouseenter", (event) => {
-            if (isMouseDown && (event.buttons & 1)) {
-                gridDiv.classList.add("hovered");
-            };
-        });
-
-        gridContainer.appendChild(gridDiv); //append
+function divCreator(userNumber) {
+    for (let i = 0; i < userNumber; i++){ //16x16 grid in js
+        for (let x = 0; x < userNumber; x++){
+            let gridDiv = document.createElement("div");
+            gridDiv.className = "gridDiv";
+    
+             gridDiv.addEventListener("mousedown", (event) => {
+                isMouseDown = true;
+                event.preventDefault(); 
+            });
+    
+            gridDiv.addEventListener("mouseup", () => {
+                isMouseDown = false;
+            });
+    
+            gridDiv.addEventListener("mouseenter", (event) => {
+                if (isMouseDown && (event.buttons & 1)) {
+                    gridDiv.classList.add("hovered");
+                };
+            });
+    
+            gridContainer.appendChild(gridDiv); //append
+        }
     }
 }
+
+divCreator(userNumber);
 
 squaresButton.addEventListener("click", () =>{ //Ask user for number of squares in grid, number should range from 1 to 100.
      userNumber = prompt("Please enter the number of squares you want in the grid.");
