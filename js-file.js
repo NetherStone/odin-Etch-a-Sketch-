@@ -7,10 +7,15 @@ let userNumber = 16
 let isMouseDown = false;
 
 function divCreator(userNumber) {
+    let divSize = 500 / userNumber;
+    divSize = divSize.toString();
+    divSize = divSize + 'px';
     for (let i = 0; i < userNumber; i++){ //16x16 grid in js
         for (let x = 0; x < userNumber; x++){
             let gridDiv = document.createElement("div");
             gridDiv.className = "gridDiv";
+            gridDiv.style.width = divSize;
+            gridDiv.style.height = divSize;
     
              gridDiv.addEventListener("mousedown", (event) => {
                 isMouseDown = true;

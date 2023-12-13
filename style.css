@@ -31,11 +31,6 @@ body {
     height: 500px;
 }
 
-.gridDiv {
-    width: 31.25px;
-    height: 31.25px;
-}
-
 .gridDiv.hovered {
     background-color: black;
 }
